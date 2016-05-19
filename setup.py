@@ -29,8 +29,7 @@ setup(
     name = 'simpleq',
     version = '0.0.1',
 
-    package_dir = { '': 'simpleq' },
-    packages = find_packages('simpleq'),
+    packages = ['simpleq'],
 
     # Packaging options:
     zip_safe = False,
