@@ -45,6 +45,7 @@ class Job(object):
         """
         data = loads(message.get_body())
         job = cls(data['callable'], *data['args'], **data['kwargs'])
+        job.message.receipt_handle = message.receipt_handle
 
         return job
 

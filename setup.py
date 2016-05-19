@@ -3,7 +3,7 @@
 
 from subprocess import call
 
-from setuptools import Command, setup
+from setuptools import Command, setup, find_packages
 
 
 class RunTests(Command):
@@ -28,7 +28,9 @@ setup(
     # Basic package information:
     name = 'simpleq',
     version = '0.0.1',
-    py_modules = ['simpleq'],
+
+    package_dir = { '': 'simpleq' },
+    packages = find_packages('simpleq'),
 
     # Packaging options:
     zip_safe = False,
