@@ -1,2 +1,7 @@
-clone:
-  path: github.com/dpraburaj/simpleq
+pipeline:
+  build:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
